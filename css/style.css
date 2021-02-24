@@ -74,7 +74,6 @@ links in the navigation are in the hover or focus state.*/
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  /*Your code here*/
 }
 
 /*Req 3b*/
@@ -96,6 +95,7 @@ links in the navigation are in the hover or focus state.*/
   grid-row-gap: 20px;
 }
 
+/*Req 6a, 6b*/
 header{
   background-attachment: fixed; /* Parallax effect */     
   background-position: center;  /* Parallax effect */
@@ -105,18 +105,15 @@ header{
   height: 400px;                /* Parallax effect */
   margin-bottom: 25px;
   background-image: url('../images/header.jpg');
-  /*Req 6b*/
 }
 
 /*Req 7a*/
 .about, .method, .client, .contacts{
   grid-column: 2 / span 2;
-  /* too big - why?!?*/
 }
 
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
-  /*column-span: all;*/
   grid-column: 1 / span 4;
   max-height: 650px;
   overflow: hidden;
@@ -159,22 +156,24 @@ header{
   /*Req 10*/
   nav{
     padding: 30px 0px;
-    /*Your code here:*/
+    text-align: right;
   }
 
   /*Req 11*/
   .container{
-    /*Your code here:*/
+    display: grid;
+    grid-column: 50px auto 500px auto 50px;
+    grid-row: 400px 425px 425px 400px;
   }
 
   /*Req 12*/
   .about, .client, .method-image, .contact-image{
-    /*Your code here:*/
+    grid-column: 3 / span 2;
   }
 
   /*Req 13*/
   .about-image, .client-image, .method, .contacts{
-    /*Your code here:*/
+    grid-column: 2 / span 2;
   }
 }
 
