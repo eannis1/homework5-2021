@@ -50,13 +50,13 @@ header p{
 }
 /*END STARTER CSS - DO NO CHANGE*/
 
-
 /*Req 1*/
 nav a{
   color: black;
   font-weight: bold;
   text-decoration: none;
 }
+
 /*Req 2*/
 nav a:hover, a:focus {
   text-decoration: underline;
@@ -64,11 +64,10 @@ nav a:hover, a:focus {
 links in the navigation are in the hover or focus state.*/
 }
 
-
 /*Req 3a*/
 .skip a{
   background: white;
-  position: relative;
+  position: absolute;
   left: 0;
   top: -50px;
   padding: 7px;
@@ -77,6 +76,7 @@ links in the navigation are in the hover or focus state.*/
   z-index: 1;
   /*Your code here*/
 }
+
 /*Req 3b*/
 .skip a:focus {
   top: 10px;
@@ -106,40 +106,40 @@ header{
   margin-bottom: 25px;
   background-image: url('../images/header.jpg');
   /*Req 6b*/
-  /*background-image doesn't work */
- 
-
 }
+
 /*Req 7a*/
 .about, .method, .client, .contacts{
-  grid-column: 2/ span 2;
+  grid-column: 2 / span 2;
+  /* too big - why?!?*/
 }
 
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
-  column-span: all;
+  /*column-span: all;*/
+  grid-column: 1 / span 4;
   max-height: 650px;
-  /* hide content outside of grid cell, begin on respective rows*/
+  overflow: hidden;
 }
 
 /*Req 7b & 8d*/
 .about, .about-image{
-  grid-row: 1/ span 1;
+  grid-row: 1 / span 1;
 }
 
 /*Req 7b & 8d*/
 .method, .method-image{
-  grid-row: 2/ span 1
+  grid-row: 2 / span 1;
 }
 
 /*Req 7b & 8d*/
 .client, .client-image{
-  grid-row: 3/ span 1
+  grid-row: 3 / span 1;
 }
 
 /*Req 7b & 8d*/
 .contacts, .contact-image{
-  grid-row: 4/ span 1
+  grid-row: 4 / span 1;
 }
 
 /*Req 9*/
@@ -147,10 +147,8 @@ header{
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  text-align: center;
-
+  align-self: center;
 }
-
 
 @media all and (min-width: 880px){
     
