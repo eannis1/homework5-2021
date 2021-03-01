@@ -25,7 +25,6 @@ h2{
 nav li{
   display:inline;
   padding-right:20px;
-
 }
 
 
@@ -90,8 +89,8 @@ links in the navigation are in the hover or focus state.*/
 /*Req 5*/
 .container{
   display: grid;
-  grid-column: 1fr 3fr 3fr 1fr;
-  grid-row: auto auto auto auto;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-row-gap: 20px;
 }
 
@@ -114,7 +113,7 @@ header{
 
 /*Req 8a, 8b, and 8c*/
 .about-image, .method-image, .client-image, .contact-image{
-  grid-column: 1 / span 4;
+  grid-column: 1 / -1;
   max-height: 650px;
   overflow: hidden;
 }
@@ -152,7 +151,8 @@ header{
   img{
      width:100%;
   }
-    
+  
+  /*NEED ALIGN VERTiCALLY CENTER?*/
   /*Req 10*/
   nav{
     padding: 30px 0px;
@@ -162,8 +162,8 @@ header{
   /*Req 11*/
   .container{
     display: grid;
-    grid-column: 50px auto 500px auto 50px;
-    grid-row: 400px 425px 425px 400px;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 400px 425px 425px 400px;
   }
 
   /*Req 12*/
@@ -176,8 +176,6 @@ header{
     grid-column: 2 / span 2;
   }
 }
-
-
 
 /*You do not need to modify any code below this line.
 It is included for accessibility to turn off animations
